@@ -306,9 +306,9 @@ global class COM_Utils {
     public static Set<String> getValidFields(final Set<String> validFields, final List<String> checkFields) {
         Set<String> valid = new Set<String>();
         if(COM_Utils.isNotEmpty(validFields) && validFields.size() > 0 && COM_Utils.isNotEmpty(checkFields)) {
-            LOGGER.debug('validFields:'+validFields);
+            LOGGER.finest('validFields:'+validFields);
             for(String field: checkFields) {
-                LOGGER.debug('validFields.contains:'+field+validFields.contains(field.toLowerCase()));
+                LOGGER.finest('validFields.contains:'+field+validFields.contains(field.toLowerCase()));
                 if(validFields.contains(field.toLowerCase())) {
                     valid.add(field);
                 }
